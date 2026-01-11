@@ -1,0 +1,104 @@
+/* App.css */
+
+/* Reset minimal */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Container principal */
+.App {
+  padding: 20px;
+}
+
+/* Boutons */
+button {
+  padding: 6px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Input fichier */
+input[type="file"] {
+  padding: 4px;
+}
+
+/* Container scrollable pour frames */
+.frames-container {
+  margin-top: 20px;
+  max-height: 60vh;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Grille responsive des frames */
+.frames-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Carte d'une frame */
+.frame-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px;
+  text-align: center;
+  background: #fafafa;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover sur frame */
+.frame-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Image de la frame */
+.frame-card img {
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Texte des frames */
+.frame-card strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* JSON Response */
+pre {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+  max-height: 300px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: pre-wrap; /* wrap long lines */
+  word-break: break-word;
+}
+
+/* Responsive small screens */
+@media (max-width: 480px) {
+  .frames-grid {
+    grid-template-columns: 1fr;
+  }
+}
